@@ -23,3 +23,9 @@ test('handle new lines between numbers (instead of commas)', () => {
 test('returns 6 when given "//;\n1;2"', function () {
     expect(add("//;\n1;2")).toBe(3);
 });
+
+test('throw an exception if input is a negative number', () => {
+    expect(() => {
+        add("-1,2");
+    }).toThrow();
+});
