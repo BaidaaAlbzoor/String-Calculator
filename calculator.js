@@ -6,9 +6,8 @@ function add(stringNumbers) {
 
 
     if (stringNumbers.substring(0, 2) === '//') {
-        delimeter = stringNumbers.substring(2, stringNumbers.indexOf('\n'));
-        let nums = stringNumbers.substring(stringNumbers.indexOf('\n') + 1);
-        numbers = nums.split(delimeter);
+        let nums = stringNumbers.replace(/[^0-9]/, '');
+        numbers = nums.split('');
     }
 
     numbers.forEach(item => {
