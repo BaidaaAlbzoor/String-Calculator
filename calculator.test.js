@@ -7,3 +7,7 @@ test('return 0 if input is ""', () => {
 test('return 1 if input is "1"', () => {
     expect(add("1")).toBe(1);
 });
+
+test('return 3 if input is "1,2"', () => {
+    expect(add("1,2")).toBe(3);
+});
