@@ -13,7 +13,13 @@ function add(stringNumbers) {
 
     numbers.forEach(item => {
         let number = parseInt(item);
+
         if (isNaN(number)) { number = 0; }
+
+        if (number < 0) {
+            throw 'Adding negative numbers:'+number+'not allowed';
+        }
+
         sum += number;
     });
 
